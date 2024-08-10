@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <title>Welcome To Car Price Prediction</title>
+    <link href=url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">)
+    <style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Hervetica, sans-serif;
+        overflow-x: hidden;
+    }
+    .bg {
+        background-color: darkgrey;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .content {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -20%);
+        text-align: center;
+        color: gold;
+        width: 80%;
+    }
+
+    .btn-custom{
+        background-color: #007bff;
+        color: whitesmoke;
+        border: none;
+        padding: 15px 30px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 50px; /* makes it circular*/
+        transition: background-color 0.3s ease; /* smooth transition*/
+    }
+
+    .btn-custom:hover {
+        background-color: lightpink; /* dark blue of hover*/
+    }
+
+    .shine {
+        display: inline-block;
+        position: relative;
+        color: darkgreen;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .shine::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(120deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
+        transform: skewX(-25deg);
+    }
+
+    .shine::before {
+        animation: shine 3s infinite;
+    }
+
+    @keyframes shine {
+        0% {
+            left: -75%;
+        }
+        100% {
+            left: -125%;
+        }
+    }
+
+    .shine-paragraph {
+        font-size: 18px;
+        text-shadow: 0 0 3px rgba(255,255,255,0.3);
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: larger;
+        font-weight: bolder;
+        color: snow; /*changed footer text color to white*/
+
+    }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="content">
+            <h1 class="shine"><b>Welcome to Car Price Prediction</b></h1>
+            <p class="shine shine-paragraph">This project focuses on predicting the price of used car using Linear Regression. by analyzing various input features such as the car's company name, model name, year of purchase, kilometers travelled and the type of the fuel and the model forecast the accurate price of the car. The prediction model is trained on a comprehensive dataset of used cars, ensuring robust and reliable predictions.Users can input specific details about the car ,and they are interested in, and the model will process this information to provide an estimate a market value. with an-easy to use interface, this project brings the power of data science in to the fingertips of anyone looking to buy or sell a used car, enhancing transparency and efficiency in marketplace</p>
+            <a href="user.html"><button class="btn-custom">COMMENCE PREDICTION</button> </a>
+        </div>
+        <div class="footer">
+            Made By:-   NIDHI SHARMA.
+        </div>
+    </div>
+
+
+</body>
+</html>
+

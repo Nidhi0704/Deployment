@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet", href="static/templates/home.html">
+    <title>Car Price Prediction :- </title>
+    <style>
+        /* Global reset and body styles*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-image: url("");
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container style */
+        #cls {
+            color: rgb(80, 78, 77);
+            background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white background*/
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        /* Form and heading style*/
+        #formm {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            background-color: transparent;
+            margin-left: 30px;
+        }
+
+        #main_h {
+            color: rgb(44, 46, 43);
+            font-size: 30px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgb(44, 46, 43);
+            margin-bottom: 20px;
+        }
+
+        #par {
+            font-size: 18px;
+            color: rgb(44, 46, 43); /* Darker text color */
+            margin-bottom: 10px;
+        }
+
+        /* Input and button style*/
+        input[type="number"], select {
+            border: 2px solid rgb(44, 46, 43); /* darker the border */
+            border-radius: 8px; /* Rounded corners */
+            height: 40px;
+            font-size: 18px;
+            padding: 0 12px; /* Padding inside the input */
+            width: calc(100% - 24px); /* Adjusted width */
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light box-shadow */
+        }
+
+        /* button style */
+        #btn, #src {
+            border: none;
+            border-radius: 50px;
+            background-color: rgb(105, 104, 102);
+            width: calc(100% - 24px);
+            height: 40px;
+            font-size: 18px;
+            color: whitesmoke;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #btn:hover, #src:hover {
+            background-color: rgb(125, 124, 122);
+        }
+
+        #pred {
+            margin-left: 10px;
+            color: rgb(19, 18, 18);
+            text-align: center;
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            #cls {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="cls">
+        <form action="{{ url_for('predict') }}" method="post" id="formm">
+            <h2 id="main_h">Enter the values to get the price</h2><br><br>
+            <p id="par"><b>Select your car model</b></p>
+            <select name="name" id="fifth" required="required">
+                <option value=""
+            </select>
+        </form>
+              <
+    </div>
+</body>
+</html>
