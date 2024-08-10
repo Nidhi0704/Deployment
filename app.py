@@ -13,11 +13,11 @@ model = pickle.load(open('LR_MODEL.pkl', 'rb'))
 # Load the car data
 car = pd.read_csv('Cleaned car.csv')
 
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template('home.html')
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/user', methods=['GET', 'POST'])
 def user():
     companies = sorted(car['company'].unique())
     car_models = sorted(car['name'].unique())
@@ -37,7 +37,7 @@ def predict():
     driven = request.form.get('kilo_driven')
 
     prediction = model.predict(pd.DataFrame(columns=['name', 'company', 'year', 'kms_driven', 'fuel_type'],
-                                            data=np.array([car_model, company, year, driven, fuel_type]).reshape(1, 5)))
+    data=np.array([car_model, company, year, driven, fuel_type]).reshape(1, 5)))
     print(prediction)
 
     return str(np.round(prediction[0], 2))
